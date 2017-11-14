@@ -28,6 +28,11 @@ function onPlayerDamage(args)
         args.damage = 0
     end
 
+    -- remove falldamage
+    if args.mod == MeansOfDeath.Falling then
+        args.damage = 0
+    end
+
 end
 
 function antiHardscope()
