@@ -41,6 +41,11 @@ function antiHardscope()
         local ads = player:playerads()
         local adscycles = player.data.adscycles or 0
 
+        if player:getCurrentWeapon() == "briefcase_bomb_mp" then
+            player:takeWeapon("briefcase_bomb_mp")
+            player:iPrintLnBold("Planting is not allowed.")
+        end
+
         if ads == 1 then
             adscycles = adscycles + 1
         else
