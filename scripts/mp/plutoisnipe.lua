@@ -58,9 +58,20 @@ function antiHardscope()
 
 end
 
+function removeAmmo()
+
+    for player in util.iterPlayers() do
+        local offhand = player:getcurrentoffhand()
+        player:setweaponammoclip(offhand, 0)
+        player:setweaponammostock(offhand, 0)
+    end
+
+end
+
 -- install callbacks
 callbacks.playerDamage.add(onPlayerDamage)
 callbacks.onInterval.add(50, antiHardscope)
+callbacks.frame.add(removeAmmo)
 
 util.print("Successfully loaded plutoisnipe.")
 util.chatPrint("Plutonium iSnipe mod by RektInator started successfully.")
