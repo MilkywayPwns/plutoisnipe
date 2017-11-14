@@ -43,7 +43,7 @@ function antiHardscope()
         end
 
         if adscycles > 5 then
-            if IsSniper(player:GetCurrentWeapon()) then
+            if isSniperRifle(player:GetCurrentWeapon()) then
                 player:allowads(false)
                 player:iPrintLnBold("Hardscoping is not allowed.")
             end
