@@ -31,7 +31,7 @@ function onPlayerDamage(args)
 end
 
 function antiHardscope()
-    
+
     for player in util.iterPlayers() do
         local ads = player:playerads()
         local adscycles = player.data.adscycles or 0
@@ -63,4 +63,4 @@ callbacks.playerDamage.add(onPlayerDamage)
 callbacks.onInterval.add(50, antiHardscope)
 
 util.print("Successfully loaded plutoisnipe.")
-utils.chatPrint("Plutonium iSnipe mod by RektInator started successfully.")
+util.chatPrint("Plutonium iSnipe mod by RektInator started successfully.")
