@@ -81,7 +81,7 @@ end
 -- install callbacks
 callbacks.playerDamage.add(onPlayerDamage)
 callbacks.onInterval.add(50, antiHardscope)
-callbacks.frame.add(removeAmmo)
+-- callbacks.frame.add(removeAmmo)
 
 util.print("Successfully loaded plutoisnipe.")
 util.chatPrint("Plutonium iSnipe mod by RektInator started successfully.")
